@@ -37,7 +37,8 @@ public class InputPrompt : MonoBehaviour
 	void Start()
 	{
 		scheme = ControllerRegistry._.scheme;
-		Dictionary<string, Sprite> string_sprite_map = CowTools.MapResources<Sprite>(System.Enum.GetNames(typeof(InputCode)), "Input Prompts");
+		string[] input_code_names = System.Enum.GetNames(typeof(InputCode));
+		Dictionary<string, Sprite> string_sprite_map = CowTools.MapResources<Sprite>(input_code_names, "Input Prompts");
 		sprites = new Dictionary<InputCode, Sprite>();
 
 		foreach(InputCode code in CowTools.EnumArray<InputCode>())

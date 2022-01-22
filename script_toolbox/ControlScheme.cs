@@ -22,14 +22,14 @@ public class ControlScheme
 
         foreach(XElement element in root.Elements())
 		{
-			string inputCodeString = element.Name.LocalName;
-			InputCode inputCode = CowTools.StringToEnum<InputCode>(inputCodeString);
+			string input_code_string = element.Name.LocalName;
+			InputCode input_code = CowTools.StringToEnum<InputCode>(input_code_string);
 
-            string keyCodeString = element.Value;
-            KeyCode keyCode = CowTools.StringToEnum<KeyCode>(keyCodeString);
+            string key_code_string = element.Value;
+            KeyCode key_code = CowTools.StringToEnum<KeyCode>(key_code_string);
 
-            map.Add(inputCode, keyCode);
-            string_map.Add(inputCode, keyCodeString);
+            map.Add(input_code, key_code);
+            string_map.Add(input_code, key_code_string);
 		}
     }
 
